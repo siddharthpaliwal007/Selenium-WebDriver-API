@@ -31,7 +31,7 @@ public class Waits {
 		wait.until(ExpectedConditions.elementToBeClickable(By.name("q"))).sendKeys("Selenium");
 
 		// Fluent wait - Similar to Explicit wait , i.e. wait for a certain duration until a condition is met.
-		// Differences - a.) Polling Frequency - cAn change as per need, b.) Ignore Exceptions - If element is not found use it as "NoSuchElement"
+		// Differences - a.) Polling Frequency - can change as per need, b.) Ignore Exceptions - If element is not found use it as "NoSuchElement"
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10))
 				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
 
